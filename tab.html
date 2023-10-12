@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+    <link rel="stylesheet" href="tab-style.css">
+</head>
+<body>
+
+    <div class="collapstab">
+        <ul class="tabs">
+            <li class="tab active" data-content-id="tab-content-1">Description1</li>
+            <li class="tab" data-content-id="tab-content-2">Description2</li>
+            <li class="tab" data-content-id="tab-content-3">Description3</li>
+        </ul>
+
+        <div id="tab-content-1" class="tab-content active">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores nostrum voluptatem totam cumque assumenda reprehenderit quibusdam iusto minus aut dignissimos atque architecto illum nobis, enim esse nam soluta est quisquam. Facilis aspernatur maxime dignissimos sed enim neque? Repudiandae ratione odit, fugiat consectetur alias maiores et voluptatibus facilis sint sed atque!
+        </div>
+
+        <div id="tab-content-2" class="tab-content">Professional as always, will continue our   partnership with Talukder!
+        </div>
+
+        <div id="tab-content-3" class="tab-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam iste voluptates repellendus reprehenderit quis. Totam blanditiis a ea repellendus provident nesciunt maxime placeat asperiores! Omnis velit amet nemo, autem voluptatum quam vero accusamus aperiam, adipisci vel minima alias at distinctio tempora reprehenderit molestiae veritatis nobis consequuntur repellendus explicabo enim esse! Culpa ipsa a aperiam pariatur molestias hic consectetur blanditiis, provident tempora unde corporis tempore saepe nesciunt, repellendus eius obcaecati dignissimos repudiandae reiciendis accusamus minus libero dolorum temporibus numquam autem! Assumenda id praesentium eligendi aut exercitationem, obcaecati totam incidunt iure, et beatae nostrum, autem quas animi. Molestias nisi necessitatibus pariatur dolorem.
+        </div>
+    
+</div>
+    <script>
+        tabs= document.querySelectorAll('.tab');
+        tabContents= document.querySelectorAll('.tab-content');
+        tabs.forEach(function(tab){
+            tab.addEventListener('click',function(){
+               
+                contentId = this.dataset.contentId;
+                content = document.getElementById(contentId);
+              
+                tabContents.forEach(function(content){
+                    content.classList.remove('active');
+                })
+                tabs.forEach(function(tab){
+                    tab.classList.remove('active');
+                })
+                
+                content.classList.add('active');
+                tab.classList.add('active');
+            })
+        });
+    </script>
+</body>
+</html>

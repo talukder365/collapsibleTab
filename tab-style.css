@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.collapstab{
+    width: 330px;
+    height: auto;
+    background-color: rgb(135, 182, 223);
+    margin: auto;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+.tabs{
+   
+    text-align: center;
+}
+.tab{
+    text-align: center;
+    background-color: azure;
+    border: 1px solid #ddd;
+    width: 100px;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.tab.active{
+    background-color: aquamarine;
+}
+.tab-content{
+    text-align: center;
+    display: none;
+    width: 314px;
+    margin: auto;
+    background-color: rgb(138, 139, 43);
+    margin-top: 20px;
+}
+
+.tab-content.active{
+    display: block;
+    
+}
